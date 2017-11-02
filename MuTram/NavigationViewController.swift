@@ -8,10 +8,34 @@
 
 import UIKit
 
-class NavigationViewController: UIViewController {
+class NavigationViewController: UIViewController,UIPickerViewDataSource,UIPickerViewDelegate {
+    
+    let Start = ["MCL","ตึกวิทยาศาสตร์","ตึกอธิการ","ประตู 4"]
+    let Stop = ["MCL","ตึกวิทยาศาสตร์","ตึกอธิการ","ประตู 4"]
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        
+        return Start.count
+    }
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+            return Start[row]
+        
+    }
 
+    
+    @IBOutlet weak var stopNavigation: UIPickerView!
+    @IBOutlet weak var startPickerView: UIPickerView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.startPickerView.delegate = self
+        self.startPickerView.dataSource = self
+        startPickerView.selectRow(2, inComponent: 0, animated: true)
+        self.stopNavigation.delegate = self
+        self.stopNavigation.dataSource = self
+        stopNavigation.selectRow(1, inComponent: 0, animated: true)
 
         // Do any additional setup after loading the view.
     }

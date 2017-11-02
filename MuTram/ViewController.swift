@@ -9,9 +9,13 @@
 import UIKit
 import MapKit
 import os.log
+import CoreLocation
 
-class ViewController: UIViewController , UISearchBarDelegate{
+class ViewController: UIViewController , UISearchBarDelegate  {
 
+    var locationManager = CLLocationManager()
+    let authorizationStatus = CLLocationManager.authorizationStatus()
+    let regionRadius:Double = 1000
     @IBOutlet weak var myMapView: MKMapView!
     @IBAction func searchButton(_ sender: Any) {
         let searchController = UISearchController(searchResultsController: nil)
@@ -20,6 +24,9 @@ class ViewController: UIViewController , UISearchBarDelegate{
         
         
     }
+    @IBAction func unwindToVC1(segue:UIStoryboardSegue) {
+ 
+    }
     
     
     
@@ -27,7 +34,10 @@ class ViewController: UIViewController , UISearchBarDelegate{
     @IBOutlet weak var rightBtn: UIBarButtonItem!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        myMapView.delegate = self
+        locationManager.delegate = self
+        configureLocationServices()
+//        centerMapOnUserLocation()
         Menus()
         // Do any additional setup after loading the view.
     }
@@ -36,6 +46,10 @@ class ViewController: UIViewController , UISearchBarDelegate{
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+   
+    
+    
     
     // Function RevealMenu
     func Menus(){
@@ -62,3 +76,27 @@ class ViewController: UIViewController , UISearchBarDelegate{
     */
 
 }
+extension ViewController: MKMapViewDelegate{
+    func centerMapOnUserLocation(){
+        guard let coordinate = locationManager.location?.coordinate else{return}
+        let coordinationRegion = MKCoordinateRegionMakeWithDistance(coordinate, regionRadius * 2.0, regionRadius * 2.0)
+        myMapView.setRegion(coordinationRegion, animated: true)
+    }
+}
+
+extension ViewController: CLLocationManagerDelegate{
+    func configureLocationServices(){
+        if authorizationStatus == .notDetermined{
+            locationManager.requestAlwaysAuthorization()
+            
+        }else{
+            return
+        }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+//        centerMapOnUserLocation()
+    }
+}
+
+

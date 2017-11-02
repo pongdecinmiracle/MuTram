@@ -1,5 +1,5 @@
 //
-//  TramScheduleViewController.swift
+//  ScheduleViewController.swift
 //  MuTram
 //
 //  Created by Pongdec><MacBook on 11/1/17.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TramScheduleViewController: UIViewController {
+class ScheduleViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,12 +20,8 @@ class TramScheduleViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-    @IBAction func backBtn(segue: UIStoryboardSegue) {
-        
-        self.navigationController?.popViewController(animated: true)
-    }
     
+
     /*
     // MARK: - Navigation
 

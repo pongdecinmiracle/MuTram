@@ -16,6 +16,9 @@
 		4131A9F41FA9D6B700033F1F /* TramScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4131A9F31FA9D6B700033F1F /* TramScheduleViewController.swift */; };
 		4131A9F61FA9D6C900033F1F /* TramRouteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4131A9F51FA9D6C900033F1F /* TramRouteViewController.swift */; };
 		4131A9F81FA9D6DC00033F1F /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4131A9F71FA9D6DC00033F1F /* NavigationViewController.swift */; };
+		418A142E1FAA2F690008D234 /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418A142D1FAA2F690008D234 /* ScheduleViewController.swift */; };
+		418A14301FAA2F7B0008D234 /* RouteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418A142F1FAA2F7B0008D234 /* RouteViewController.swift */; };
+		418A14321FAA2F9B0008D234 /* DetailNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418A14311FAA2F9B0008D234 /* DetailNavigationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +35,9 @@
 		4131A9F31FA9D6B700033F1F /* TramScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TramScheduleViewController.swift; sourceTree = "<group>"; };
 		4131A9F51FA9D6C900033F1F /* TramRouteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TramRouteViewController.swift; sourceTree = "<group>"; };
 		4131A9F71FA9D6DC00033F1F /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
+		418A142D1FAA2F690008D234 /* ScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
+		418A142F1FAA2F7B0008D234 /* RouteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteViewController.swift; sourceTree = "<group>"; };
+		418A14311FAA2F9B0008D234 /* DetailNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailNavigationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +82,9 @@
 				4131A9ED1FA9B80F00033F1F /* SWRevealViewController.h */,
 				4131A9E71FA9B7EE00033F1F /* Info.plist */,
 				4131A9F01FA9B8DF00033F1F /* MuTram-Bridging-Header.h */,
+				418A142D1FAA2F690008D234 /* ScheduleViewController.swift */,
+				418A142F1FAA2F7B0008D234 /* RouteViewController.swift */,
+				418A14311FAA2F9B0008D234 /* DetailNavigationViewController.swift */,
 			);
 			path = MuTram;
 			sourceTree = "<group>";
@@ -155,10 +164,13 @@
 			files = (
 				4131A9F81FA9D6DC00033F1F /* NavigationViewController.swift in Sources */,
 				4131A9F61FA9D6C900033F1F /* TramRouteViewController.swift in Sources */,
+				418A14301FAA2F7B0008D234 /* RouteViewController.swift in Sources */,
 				4131A9EF1FA9B85400033F1F /* ViewController.swift in Sources */,
 				4131A9DC1FA9B7EE00033F1F /* AppDelegate.swift in Sources */,
 				4131A9F41FA9D6B700033F1F /* TramScheduleViewController.swift in Sources */,
+				418A142E1FAA2F690008D234 /* ScheduleViewController.swift in Sources */,
 				4131A9F21FA9B8E000033F1F /* SWRevealViewController.m in Sources */,
+				418A14321FAA2F9B0008D234 /* DetailNavigationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
